@@ -1,12 +1,15 @@
 import { Link } from "react-router-dom"
+import logo from "./assets/budgetbeelogo.svg"
 
 function Header() {
   return (
-    <div style={{ margin: 10 }}>
-      <Link style={{ marginRight: 20 }} to='/'>Home</Link>
-      <Link to='/login'>Login</Link>
-    </div>
-  )
+    <header className="header">
+      <Link className="nav-link" to='/'><img id="logonav" src={logo} /></Link>
+      <nav className="nav-links">
+        <Link className="nav-link" to='/login'>Login</Link>
+      </nav>
+    </header>
+  );
 }
 
-export default Header
+export default Header;
